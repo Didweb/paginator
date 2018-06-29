@@ -26,7 +26,8 @@ Explanation of this code:
 * **$consult**: It is the query we must make a query where we get the total of the records that we want to paginate.
 * **$urlBase**: The url that we will mount in the pager in the case of being in a controller we will use this pattern. Change the NAME_CONTROLLER to the name of the controller.
 * **$paginator**: Here we generate the pagination and obtain the array with the necessary parameters to build the pagination.
-  * **page**: It is the previously mentioned.
+
+  * **$page**: It is the previously mentioned.
   * **$consult**: It is the aforementioned.
   * **20**: It must be a numerical value that we will indicate the number of records per page.
   * **$urlBase**: It is the aforementioned.
@@ -126,11 +127,11 @@ $paginator = Paginator::pagination($page, $consult, 20, $urlBase, 5);
 * **$consult**: Es la consulta debemos hacer una consulta donde obtengamos el total de los registros que se quieren paginar.
 * **$urlBase**: La url que montaremos en el paginador en el caso de estar en un controlador usaremos este patrón. Cambia el NAME_CONTROLLER por el nombre del controlador.
 * **$paginator**: Aquí generamos la paginación y obtenemos el array con los parámetros necesarios para construir la paginación.
- * **page**: Es el anteriormente mencionado.
- * **$consult**: Es el anteriormente mencionado.
- * **20**: Ha de ser un valor númerico que indicaremos el número de registros por pagina.
- * **$urlBase**: Es el anteriormente mencionado.
- * **5**: Ha de ser un valor númerico.  Con el que indicaremos el rango de paginas en que se verán en los links de la paginación.
+  * **page**: Es el anteriormente mencionado.
+  * **$consult**: Es el anteriormente mencionado.
+  * **20**: Ha de ser un valor númerico que indicaremos el número de registros por pagina.
+  * **$urlBase**: Es el anteriormente mencionado.
+  * **5**: Ha de ser un valor númerico.  Con el que indicaremos el rango de paginas en que se verán en los links de la paginación.
 
 Pasamos los parámetros a nuestra plantilla de Smarty:
 
