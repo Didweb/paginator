@@ -1,0 +1,12 @@
+{
+    "name": "did-web/paginator",
+    "description": "Paginator",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Eduardo Pinuaga Linares",
+            "email": "info@did-web.com"
+        }
+    ],
+    "require": {}
+}
