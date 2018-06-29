@@ -1,6 +1,8 @@
 {
     "name": "did-web/paginator",
     "description": "Paginator",
+    "keywords": ["paginator", "prestashop", "pagination"],
+    "homepage": "https://github.com/Didweb/paginator",
     "type": "library",
     "license": "GPL-3.0-or-later",
     "authors": [
