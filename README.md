@@ -123,10 +123,15 @@ Erklärung dieses Codes:
 * **$consult**: Es ist die Abfrage, dass wir eine Abfrage machen müssen, wo wir die Summe der Datensätze erhalten, die wir paginieren wollen.
 * **$urlBase**: Die URL, die wir im Pager einbinden werden, wenn wir in einem Controller sind, werden wir dieses Muster verwenden. Ändern Sie den NAME_CONTROLLER in den Namen des Controllers.
 * **$paginator**: Hier erzeugen wir die Paginierung und erhalten das Array mit den notwendigen Parametern, um die Paginierung zu erstellen.
+
    * **$page**: Es ist das vorher erwähnte.
+
    * **$consult**: Es ist das bereits erwähnte.
+
    * **20**: Es muss ein numerischer Wert sein, dass wir die Anzahl der Datensätze pro Seite angeben.
+
    * **$urlBase**: Es ist das bereits erwähnte.
+
    * **5**: Es muss ein numerischer Wert sein. Damit geben wir den Umfang der Seiten an, die in den Links der Seite zu sehen sind.
 
 Wir übergeben die Parameter an unsere Smarty-Vorlage:
