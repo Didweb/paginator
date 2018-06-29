@@ -2,10 +2,12 @@
 # Paginator :gb:
 Pager for listings in Prestashop.
 
+----
 
 # Paginator :de:
 Pager for listings in Prestashop.
 
+----
 
 # Paginator :es:
 Paginador para listados en Prestashop.
@@ -60,7 +62,37 @@ Muestra de ejemplo en archivo.tpl :
 {foreach from=$reports item=items_reports key=keys}
   {$reports.id} - {$reports.name} -{$reports.telefon}
 {/foreach}
-
+...
 {include file="../../../vendor/did-web/paginator/views/templates/admin/pagination.tpl"}
 
+```
+
+### Instalación
+Para poder instalarlo se crea un archivo composer.json como este:
+
+```
+{
+    "name": "did-web/name_of_your_module",
+    "description": "text",
+    "type": "Prestashop Module",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your@mail.com",
+            "homepage": "www.your-website.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+      "did-web/paginator": "dev-master"
+    }
+}
+```
+
+La parte importante del ejemplo es el *require*:
+**did-web/paginator": "dev-master"**
+
+Para ejecutarlo de forma manual desde tu consola:
+```
+composer install
 ```
