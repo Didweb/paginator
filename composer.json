@@ -11,6 +11,6 @@
             "role": "Developer"
         }
     ],
-    "require": {}
+    "require": {},
     "repository": {"url":"https://packagist.org/api/update-package?username=Didweb&apiToken=7b71df78f710e47fecd7a31b1b699f93f7d330fd"}
 }
