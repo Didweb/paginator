@@ -96,7 +96,98 @@ composer install
 ----
 
 # Paginator :de:
-Pager for listings in Prestashop.
+Pager für Einträge in Prestashop.
+
+### Ziel
+Es ist ein wenig Code, um Seiten in den Prestashop-Administrationsmodulen erstellen zu können.
+
+### Anwendungsbeispiel
+Unser Code muss in der Lage sein, einen Parameter zu generieren, der die Seitennummer enthält. In diesem Beispiel heißt es "page".
+
+
+*Anwendungsbeispiel:*
+
+Mit diesem Code initialisieren wir den Paginierungserstellungsprozess und erhalten ein Array mit Parametern.
+
+```
+$page = Tools::getValue('page');
+$consult = $this->repositories->listReports2();
+$urlBase = "index.php?controller=NAME_CONTROLLER"
+                     ."&token=".Tools::getValue('token');
+$paginator = Paginator::pagination($page, $consult, 20, $urlBase, 5);
+
+```
+Erklärung dieses Codes:
+
+* **$page**: Wir sammeln den GET-Parameter, in dem die Seitenzahl gespeichert ist.
+* **$consult**: Es ist die Abfrage, dass wir eine Abfrage machen müssen, wo wir die Summe der Datensätze erhalten, die wir paginieren wollen.
+* **$urlBase**: Die URL, die wir im Pager einbinden werden, wenn wir in einem Controller sind, werden wir dieses Muster verwenden. Ändern Sie den NAME_CONTROLLER in den Namen des Controllers.
+* **$paginator**: Hier erzeugen wir die Paginierung und erhalten das Array mit den notwendigen Parametern, um die Paginierung zu erstellen.
+   * **$page**: Es ist das vorher erwähnte.
+   * **$consult**: Es ist das bereits erwähnte.
+   * **20**: Es muss ein numerischer Wert sein, dass wir die Anzahl der Datensätze pro Seite angeben.
+   * **$urlBase**: Es ist das bereits erwähnte.
+   * **5**: Es muss ein numerischer Wert sein. Damit geben wir den Umfang der Seiten an, die in den Links der Seite zu sehen sind.
+
+Wir übergeben die Parameter an unsere Smarty-Vorlage:
+
+```
+$this->context->smarty->assign(array(
+                        'list_items' => $paginator['result'],
+                        'paginator'  => $paginator
+                      ));
+return $this->context->smarty->createTemplate(_PS_MODULE_DIR_.'name_of_your_module\views\templates\admin\/'. $tpl_name, $this->context->smarty);
+
+```
+
+Wir müssen in diesem Fall den Parametersatz senden: *$paginator* und der Name des Parameters muss wie erforderlich aufgerufen werden: **paginator**.
+
+Das Ergebnis der Auflistung ist: **$paginator ['result']**. In diesem Fall übergeben wir es separat oder wir können es innerhalb der Vorlage sammeln.
+
+Wie man es in der Vorlage verwendet:
+
+In der Vorlage, die diesem Beispiel folgt, drucken wir die Ergebnisse, die wir an den Parameter *list_items* übergeben haben, mit einem *{foreach}* und rufen die Vorlage auf, die die Seite mit einem *include* druckt.
+
+Beispielbeispiel in file.tpl:
+
+```
+{foreach from=$reports item=items_reports key=keys}
+  {$reports.id} - {$reports.name} -{$reports.telefon}
+{/foreach}
+...
+{include file="../../../vendor/did-web/paginator/views/templates/admin/pagination.tpl"}
+
+```
+
+### Installation
+Um es zu installieren, wird eine composer.json-Datei wie folgt erstellt:
+
+```
+{
+    "name": "did-web/name_of_your_module",
+    "description": "text",
+    "type": "Prestashop Module",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your@mail.com",
+            "homepage": "www.your-website.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+      "did-web/paginator": "dev-master"
+    }
+}
+```
+
+Der wichtige Teil des Beispiels ist das *require*:
+**did-web / paginator ":" dev-master "**
+
+Um es manuell von Ihrer Konsole aus zu starten:
+```
+composer install
+```
 
 ----
 
