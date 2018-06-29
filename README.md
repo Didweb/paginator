@@ -26,12 +26,11 @@ Explanation of this code:
 * **$consult**: It is the query we must make a query where we get the total of the records that we want to paginate.
 * **$urlBase**: The url that we will mount in the pager in the case of being in a controller we will use this pattern. Change the NAME_CONTROLLER to the name of the controller.
 * **$paginator**: Here we generate the pagination and obtain the array with the necessary parameters to build the pagination.
-
-  * **$page**: It is the previously mentioned.
-  * **$consult**: It is the aforementioned.
-  * **20**: It must be a numerical value that we will indicate the number of records per page.
-  * **$urlBase**: It is the aforementioned.
-  * **5**: It must be a numeric value. With which we will indicate the range of pages that will be seen in the links of the page.
+  * **$page**: It is the previously mentioned.
+  * **$consult**: It is the aforementioned.
+  * **20**: It must be a numerical value that we will indicate the number of records per page.
+  * **$urlBase**: It is the aforementioned.
+  * **5**: It must be a numeric value. With which we will indicate the range of pages that will be seen in the links of the page.
 
 We pass the parameters to our Smarty template:
 
