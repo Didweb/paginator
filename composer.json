@@ -2,10 +2,13 @@
     "name": "did-web/paginator",
     "description": "Paginator",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Eduardo Pinuaga Linares",
-            "email": "info@did-web.com"
+            "email": "info@did-web.com",
+            "homepage": "http://www.did-web.com",
+            "role": "Developer"
         }
     ],
     "require": {}
