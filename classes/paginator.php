@@ -2,11 +2,11 @@
 /**
 *  @author    Eduardo Pinuaga Linares Did-web.com <info@did-web.com>
 *  @copyright did-web.com 2018
-*  @license   GNU General Public License version 2
+*  @license   GNU General Public License version 3
 *  @version   1
 *  Did-web.com
 *
-* Languages: ES, GB, DE
+* Languages: EN
 * PS version: 1.7
 *
 **/

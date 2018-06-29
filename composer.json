@@ -2,7 +2,7 @@
     "name": "did-web/paginator",
     "description": "Paginator",
     "type": "library",
-    "license": "MIT",
+    "license": "GNU v.3",
     "authors": [
         {
             "name": "Eduardo Pinuaga Linares",
