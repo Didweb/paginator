@@ -79,13 +79,13 @@ To be able to install it, a composer.json file is created like this:
         }
     ],
     "require": {
-      "did-web/paginator": "dev-master"
+      "did-web/paginator": "1.0.*"
     }
 }
 ```
 
 The important part of the example is the *require*:
-**did-web / paginator ":"1.0.*"**
+**"did-web / paginator ":"1.0.*"**
 
 To run it manually from your console:
 
@@ -175,13 +175,13 @@ Um es zu installieren, wird eine composer.json-Datei wie folgt erstellt:
         }
     ],
     "require": {
-      "did-web/paginator": "dev-master"
+      "did-web/paginator": "1.0.*"
     }
 }
 ```
 
 Der wichtige Teil des Beispiels ist das *require*:
-**did-web / paginator ":"1.0.*"**
+**"did-web / paginator ":"1.0.*"**
 
 Um es manuell von Ihrer Konsole aus zu starten:
 ```
@@ -269,13 +269,13 @@ Para poder instalarlo se crea un archivo composer.json como este:
         }
     ],
     "require": {
-      "did-web/paginator": "dev-master"
+      "did-web/paginator": "1.0.*"
     }
 }
 ```
 
 La parte importante del ejemplo es el *require*:
-**did-web/paginator": "1.0.*"**
+**"did-web/paginator": "1.0.*"**
 
 Para ejecutarlo de forma manual desde tu consola:
 ```
