@@ -58,7 +58,7 @@ Sample sample in file.tpl:
   {$reports.id} - {$reports.name} -{$reports.telefon}
 {/foreach}
 ...
-{include file="../../../vendor/did-web/paginator/views/templates/admin/pagination.tpl"}
+{include file="../../../vendor/didweb/paginator/views/templates/admin/pagination.tpl"}
 
 ```
 
@@ -67,7 +67,7 @@ To be able to install it, a composer.json file is created like this:
 
 ```
 {
-    "name": "did-web/name_of_your_module",
+    "name": "didweb/name_of_your_module",
     "description": "text",
     "type": "Prestashop Module",
     "authors": [
@@ -79,13 +79,13 @@ To be able to install it, a composer.json file is created like this:
         }
     ],
     "require": {
-      "did-web/paginator": "1.0.*"
+      "didweb/paginator": "1.0.*"
     }
 }
 ```
 
 The important part of the example is the *require*:
-**"did-web / paginator ":"1.0.*"**
+**"didweb / paginator ":"1.0.*"**
 
 To run it manually from your console:
 
@@ -154,7 +154,7 @@ Beispielbeispiel in file.tpl:
   {$reports.id} - {$reports.name} -{$reports.telefon}
 {/foreach}
 ...
-{include file="../../../vendor/did-web/paginator/views/templates/admin/pagination.tpl"}
+{include file="../../../vendor/didweb/paginator/views/templates/admin/pagination.tpl"}
 
 ```
 
@@ -163,7 +163,7 @@ Um es zu installieren, wird eine composer.json-Datei wie folgt erstellt:
 
 ```
 {
-    "name": "did-web/name_of_your_module",
+    "name": "didweb/name_of_your_module",
     "description": "text",
     "type": "Prestashop Module",
     "authors": [
@@ -175,13 +175,13 @@ Um es zu installieren, wird eine composer.json-Datei wie folgt erstellt:
         }
     ],
     "require": {
-      "did-web/paginator": "1.0.*"
+      "didweb/paginator": "1.0.*"
     }
 }
 ```
 
 Der wichtige Teil des Beispiels ist das *require*:
-**"did-web / paginator ":"1.0.*"**
+**"didweb / paginator ":"1.0.*"**
 
 Um es manuell von Ihrer Konsole aus zu starten:
 ```
@@ -248,7 +248,7 @@ Muestra de ejemplo en archivo.tpl :
   {$reports.id} - {$reports.name} -{$reports.telefon}
 {/foreach}
 ...
-{include file="../../../vendor/did-web/paginator/views/templates/admin/pagination.tpl"}
+{include file="../../../vendor/didweb/paginator/views/templates/admin/pagination.tpl"}
 
 ```
 
@@ -257,7 +257,7 @@ Para poder instalarlo se crea un archivo composer.json como este:
 
 ```
 {
-    "name": "did-web/name_of_your_module",
+    "name": "didweb/name_of_your_module",
     "description": "text",
     "type": "Prestashop Module",
     "authors": [
@@ -269,13 +269,13 @@ Para poder instalarlo se crea un archivo composer.json como este:
         }
     ],
     "require": {
-      "did-web/paginator": "1.0.*"
+      "didweb/paginator": "1.0.*"
     }
 }
 ```
 
 La parte importante del ejemplo es el *require*:
-**"did-web/paginator": "1.0.*"**
+**"didweb/paginator": "1.0.*"**
 
 Para ejecutarlo de forma manual desde tu consola:
 ```

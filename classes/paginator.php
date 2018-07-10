@@ -3,7 +3,7 @@
 *  @author    Eduardo Pinuaga Linares Did-web.com <info@did-web.com>
 *  @copyright did-web.com 2018
 *  @license   GNU General Public License version 3
-*  @version   1.0.0
+*  @version   1.0.2
 *  Did-web.com
 *
 * Languages: EN
