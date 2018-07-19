@@ -45,6 +45,7 @@ class Paginator
                             'stop'     => $stop,
                             'result'   => $cutConsult,
                             'txt_paginator'=> $translation);
+
         return $parameters;
     }
 }

@@ -3,7 +3,7 @@
     <ul class="pagination">
         {if $paginator.p != 1 && $paginator.p}
             {assign var='p_previous' value=$paginator.p-1}
-            
+
             <li id="pagination_previous{if isset($paginationId)}_{$paginationId}{/if}" class="pagination_previous">
                 <a rel="nofollow" href="{$paginator.urlBase}&page={$paginator.prev_p}">
                     <i class="icon-chevron-left"></i> <b>{$paginator.txt_paginator['Previous']}</b>
@@ -13,6 +13,7 @@
             <li id="pagination_previous{if isset($paginationId)}_{$paginationId}{/if}" class="disabled pagination_previous">
                 <span>
                     <i class="icon-chevron-left"></i> <b>{$paginator.txt_paginator['Previous']}</b>
+
                 </span>
             </li>
         {/if}
