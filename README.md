@@ -138,7 +138,7 @@ Erklärung dieses Codes:
   * **20**: Es muss ein numerischer Wert sein, dass wir die Anzahl der Datensätze pro Seite angeben.
   * **$urlBase**: Es ist das bereits erwähnte.
   * **5**: Es muss ein numerischer Wert sein. Damit geben wir den Umfang der Seiten an, die in den Links der Seite zu sehen sind.
-  * **$paginator_txt**: Es ist notwendig ein Array mit den Texten ***Previous*** und ***Next*** zu übergeben. Sie können einfache Texte sein. Falls das Plugin in mehreren Sprachen verfügbar ist, können Sie das Prestashop-System der Übersetzungen verwenden: ***$this->l('your_text')***.
+  * **$paginator_txt**: Es ist notwendig ein Array mit den Texten ***Previous*** und ***Next*** zu übergeben. Sie können einfache Texte sein. Falls das Plugin in mehreren Sprachen verfügbar ist, können Sie das Prestashop-System der Übersetzungen verwenden: ***$this->l('your_text')*** 
   
   Das Array muss die Tasten "Previous" und "Next" haben ...
    ```
@@ -242,7 +242,7 @@ $paginator = Paginator::pagination($page, $consult, 20, $urlBase, 5, $paginator_
   * **20**: Ha de ser un valor númerico que indicaremos el número de registros por pagina.
   * **$urlBase**: Es el anteriormente mencionado.
   * **5**: Ha de ser un valor númerico.  Con el que indicaremos el rango de paginas en que se verán en los links de la paginación.
-  * **$paginator_txt**: Es necesarios pasar un array con los textos para ***Previous*** y para ***Next***. Pueden ser textos planos. En elcaso de que el plugin este en varios idiomas puedes utilizar el sistema de Prestashop de traducciones: ***$this->l('tu_texto')***.
+  * **$paginator_txt**: Es necesarios pasar un array con los textos para ***Previous*** y para ***Next***. Pueden ser textos planos. En elcaso de que el plugin este en varios idiomas puedes utilizar el sistema de Prestashop de traducciones: ***$this->l('tu_texto')*** .
 
   El array ha de tener las keys 'Previous' y 'Next'...
   ```
