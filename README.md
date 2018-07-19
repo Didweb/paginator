@@ -17,7 +17,8 @@ $page = Tools::getValue('page');
 $consult = $this->repositories->listReports2();
 $urlBase = "index.php?controller=NAME_CONTROLLER"
                      ."&token=".Tools::getValue('token');
-$paginator = Paginator::pagination($page, $consult, 20, $urlBase, 5);
+$paginator_txt =array('Previous'=>'Previous', 'Next'=>'Next');
+$paginator = Paginator::pagination($page, $consult, 20, $urlBase, 5, $paginator_txt);
 
 ```
 Explanation of this code:
@@ -31,6 +32,15 @@ Explanation of this code:
   * **20**: It must be a numerical value that we will indicate the number of records per page.
   * **$urlBase**: It is the aforementioned.
   * **5**: It must be a numeric value. With which we will indicate the range of pages that will be seen in the links of the page.
+  * **$paginator_txt**: It is necessary to pass an array with the texts for ***Previous*** and for ***Next***. They can be plain texts. In case the plugin is in several languages you can use the Prestashop system of translations: ***$this->l('your_text')***.
+  
+   The array must have the 'Previous' and 'Next' keys ...
+   ```
+   array (
+         'Previous' => 'Text Previuos',
+         'Next' => 'text Next'
+         )
+   ```
 
 We pass the parameters to our Smarty template:
 
@@ -113,7 +123,8 @@ $page = Tools::getValue('page');
 $consult = $this->repositories->listReports2();
 $urlBase = "index.php?controller=NAME_CONTROLLER"
                      ."&token=".Tools::getValue('token');
-$paginator = Paginator::pagination($page, $consult, 20, $urlBase, 5);
+$paginator_txt =array('Previous'=>'Bisherige', 'Next'=>'Nächster');
+$paginator = Paginator::pagination($page, $consult, 20, $urlBase, 5, $paginator_txt);
 
 ```
 Erklärung dieses Codes:
@@ -127,7 +138,15 @@ Erklärung dieses Codes:
   * **20**: Es muss ein numerischer Wert sein, dass wir die Anzahl der Datensätze pro Seite angeben.
   * **$urlBase**: Es ist das bereits erwähnte.
   * **5**: Es muss ein numerischer Wert sein. Damit geben wir den Umfang der Seiten an, die in den Links der Seite zu sehen sind.
-
+  * **$paginator_txt**: Es ist notwendig ein Array mit den Texten ***Previous*** und ***Next*** zu übergeben. Sie können einfache Texte sein. Falls das Plugin in mehreren Sprachen verfügbar ist, können Sie das Prestashop-System der Übersetzungen verwenden: ***$this->l('your_text')***.
+  
+  Das Array muss die Tasten "Previous" und "Next" haben ...
+   ```
+   array (
+         'Previous' => 'Text Bisherige',
+         'Next'     => 'Text Nächster'
+         )
+  ```
 Wir übergeben die Parameter an unsere Smarty-Vorlage:
 
 ```
@@ -208,7 +227,8 @@ $page = Tools::getValue('page');
 $consult = $this->repositories->listReports2();
 $urlBase = "index.php?controller=NAME_CONTROLLER"
                      ."&token=".Tools::getValue('token');
-$paginator = Paginator::pagination($page, $consult, 20, $urlBase, 5);
+$paginator_txt =array('Previous'=>'Anterior', 'Next'=>'Próximo');
+$paginator = Paginator::pagination($page, $consult, 20, $urlBase, 5, $paginator_txt);
 
 ```
  Explicación de éste código:
@@ -222,6 +242,15 @@ $paginator = Paginator::pagination($page, $consult, 20, $urlBase, 5);
   * **20**: Ha de ser un valor númerico que indicaremos el número de registros por pagina.
   * **$urlBase**: Es el anteriormente mencionado.
   * **5**: Ha de ser un valor númerico.  Con el que indicaremos el rango de paginas en que se verán en los links de la paginación.
+  * **$paginator_txt**: Es necesarios pasar un array con los textos para ***Previous*** y para ***Next***. Pueden ser textos planos. En elcaso de que el plugin este en varios idiomas puedes utilizar el sistema de Prestashop de traducciones: ***$this->l('tu_texto')***.
+
+  El array ha de tener las keys 'Previous' y 'Next'...
+  ```
+  array(
+        'Previous'=>'Text Previuos',
+        'Next'=> 'text Next'
+        )
+  ```
 
 Pasamos los parámetros a nuestra plantilla de Smarty:
 
