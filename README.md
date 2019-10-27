@@ -13,6 +13,8 @@ Our code must be able to generate a parameter that contains the page number. In 
 With this code we initialize the pagination creation process and obtain an array with parameters.
 
 ```
+use DidWeb\Paginator\Classes\Paginator;
+
 $page = Tools::getValue('page');
 $consult = $this->repositories->listReports2();
 $urlBase = "index.php?controller=NAME_CONTROLLER"
@@ -119,6 +121,9 @@ Unser Code muss in der Lage sein, einen Parameter zu generieren, der die Seitenn
 Mit diesem Code initialisieren wir den Paginierungserstellungsprozess und erhalten ein Array mit Parametern.
 
 ```
+use DidWeb\Paginator\Classes\Paginator;
+
+
 $page = Tools::getValue('page');
 $consult = $this->repositories->listReports2();
 $urlBase = "index.php?controller=NAME_CONTROLLER"
@@ -223,6 +228,9 @@ Nuestro código ha de poder generar un parámetro que contenga el número de pá
 Con este código inicializamos el proceso de creación de paginación y obtenemos un array con parámetros.
 
 ```
+use DidWeb\Paginator\Classes\Paginator;
+
+
 $page = Tools::getValue('page');
 $consult = $this->repositories->listReports2();
 $urlBase = "index.php?controller=NAME_CONTROLLER"
